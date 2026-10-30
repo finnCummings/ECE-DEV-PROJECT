@@ -4,7 +4,7 @@
 | --- | --- |
 | Test ID | COM-001 |
 | Date | YYYY-MM-DD |
-| Project | NAVCOM |
+| Project | FIELDLINK |
 | System / subsystem | Communications |
 | Author | |
 | Related requirement / GitHub issue | |
