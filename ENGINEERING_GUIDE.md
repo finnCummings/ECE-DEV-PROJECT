@@ -28,6 +28,44 @@ Keep names of source code and actively edited CAD files stable; use Git history 
 - Mark capabilities accurately: planned, in development, or verified.
 - Protect credentials and personal, controlled, and proprietary materials; do not publish sensitive records.
 
+## Requirements identification and traceability
+
+Assign each formal requirement a **stable, unique ID** so designs, tests, and evidence can refer to it without ambiguity. Use the format `PREFIX-NNN`, where the prefix identifies the requirement level or subsystem and the three-digit number is a sequential identifier within that category. These prefixes are **FIELDLINK project conventions**, not universal industry standards.
+
+| Prefix | Scope | Example |
+| --- | --- | --- |
+| `SYS` | Complete system behavior | `SYS-001` — bidirectional ground-station-to-node communication |
+| `COM` | Communication interfaces and protocol | `COM-001` — UART message reception |
+| `PWR` | Power subsystem | `PWR-001` — power input requirements |
+| `HWR` | Hardware and electrical interfaces | `HWR-001` — compatible logic voltage |
+| `SWR` | Firmware/software behavior | `SWR-001` — packet validation behavior |
+
+Introduce a prefix only when it helps distinguish actual requirements; avoid inventing unused categories. Assign new IDs in sequence, **do not reuse retired IDs**, and keep an ID stable when wording is revised. A requirement should state an observable or measurable outcome and have an identified verification method. Avoid treating a general aspiration like "reliable" as a verified requirement until it has measurable acceptance criteria.
+
+### System-level versus subsystem requirements
+
+System requirements describe the capability FIELDLINK must provide end to end. Subsystem requirements describe specific capabilities needed to accomplish it. For example:
+
+- `SYS-001`: communicate bidirectionally between a ground station and a remote node.
+- `COM-001`: receive and interpret a UART message.
+- `COM-002`: send a UART response.
+
+The two UART requirements contribute to `SYS-001`, but passing UART tests **does not establish that the LoRa end-to-end link meets `SYS-001`**. That requires separate system-level verification.
+
+### Keep test IDs separate
+
+Use `TST-NNN` for **test procedures or test cases**, never for requirements. For example, `COM-001` is a requirement, while `TST-001` can be the UART PING/PONG test that checks `COM-001` and `COM-002`. The same test may verify more than one requirement. Conversely, one requirement may need multiple tests.
+
+A small traceability table in the project's requirements document is sufficient initially:
+
+| Requirement ID | Verification test ID | Result | Evidence |
+| --- | --- | --- | --- |
+| `COM-001` | `TST-001` | Not tested | — |
+| `COM-002` | `TST-001` | Not tested | — |
+| `SYS-001` | `TST-002` (planned) | Not tested | — |
+
+Update results **only after executing tests** and linking actual reports, raw data, or other evidence. Keep engineering logbooks identified by date and descriptive filename; a separate `LOG-NNN` series is unnecessary unless a genuine traceability need emerges. Existing examples labeled `COM-001_uart` should be renamed to `TST-001_uart` when the corresponding test directory is created.
+
 ## Practical workflow
 1. Define the problem and what success means.
 2. Design a simple solution, noting meaningful tradeoffs.
