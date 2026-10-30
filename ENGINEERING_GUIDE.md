@@ -28,6 +28,18 @@ Keep names of source code and actively edited CAD files stable; use Git history 
 - Mark capabilities accurately: planned, in development, or verified.
 - Protect credentials and personal, controlled, and proprietary materials; do not publish sensitive records.
 
+## New project initiation and requirements review
+
+**Every new engineering project starts with a draft `requirements.md` for the project owner's review, before architecture design, implementation, or testing begins.**
+
+1. Create the project directory and copy [`templates/requirements.md`](templates/requirements.md) into it as `requirements.md`.
+2. Draft the objectives, scope, functional and nonfunctional requirements, interfaces, constraints, and planned verification methods. Give requirements stable unique IDs following the conventions below; label unknowns explicitly as **TBD**.
+3. Commit the draft to GitHub and provide a direct link for review. Mark its status **Draft — Pending Review**.
+4. **Wait for the project owner's feedback and approval before advancing to architecture, code, hardware design, or tests.** Revise the draft as requested and retain the review history through Git commits.
+5. After approval, mark the document **Reviewed — Initial Baseline** and continue with the architecture and implementation plan. Any later requirement changes should be reviewed before they materially change scope.
+
+Creating the initial project overview and requirements draft is permitted before review; do not treat a draft as an approved technical baseline. Keep this gate lightweight—one clear review, not excessive administration.
+
 ## Requirements identification and traceability
 
 Assign each formal requirement a **stable, unique ID** so designs, tests, and evidence can refer to it without ambiguity. Use the format `PREFIX-NNN`, where the prefix identifies the requirement level or subsystem and the three-digit number is a sequential identifier within that category. These prefixes are **FIELDLINK project conventions**, not universal industry standards.
