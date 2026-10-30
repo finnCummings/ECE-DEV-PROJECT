@@ -1,4 +1,4 @@
-# FIELDLINK — Modular LoRa Communications Platform
+# FIELDLINK  Modular LoRa Communications Platform
 
 **Status:** Planning  
 **Project type:** Reusable embedded communications subsystem
@@ -30,7 +30,7 @@ FIELDLINK is intended to be a **communications building block**, not a communica
 
 Candidate hardware from previous experiments: Arduino Uno R4 WiFi, EBYTE E32-900T20D UART LoRa modules, CP2102 USB-to-UART adapter, and a PC-based Python ground station. Exact voltage levels, pin assignments, operating modes, and configuration will be confirmed against the relevant datasheets before wiring.
 
-## First milestone: D03 — Architecture and requirements
+## First milestone: D03  Architecture and requirements
 
 Document the logical ground-station-to-node architecture, module interfaces, initial requirements, and a **COM-001 wired UART PING/PONG test plan**.
 
