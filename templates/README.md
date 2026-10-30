@@ -26,7 +26,7 @@ You can also press **`.`** while viewing the repository on GitHub to open the br
 
 ```text
 projects/
-└── navcom/
+└── fieldlink/
     └── systems/
         └── communications/
             ├── logbook/
