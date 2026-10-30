@@ -1,7 +1,7 @@
-# FIELDLINK  Modular LoRa Communications Platform
+# FIELDLINK — Modular LoRa Communications System
 
 **Status:** Planning  
-**Project type:** Reusable embedded communications subsystem
+**Project type:** Integrated reusable communications system
 
 ## Mission
 
@@ -28,7 +28,9 @@ FIELDLINK is intended to be a **communications building block**, not a communica
 
 ## Operator interface
 
-The companion [FIELDLINK-UI](../FIELDLINK-UI/) project provides the desktop controls, command display, telemetry visualization, and diagnostics. FIELDLINK itself owns the reusable communication transport and protocol; the UI consumes that interface.
+FIELDLINK contains the [ground station UI](ground_station/ui/README.md), ground-side transceiver, shared message protocol, and remote transceiver as parts of one integrated system. The UI manages operator commands, telemetry visualization, and diagnostics; the transceivers handle transport. External applications remain independent projects.
+
+The [master system requirements](requirements.md) cover all FIELDLINK subsystems and are currently **Draft — Pending Review**.
 
 ## Initial development hardware
 
@@ -36,7 +38,7 @@ Candidate hardware from previous experiments: Arduino Uno R4 WiFi, EBYTE E32-900
 
 ## First milestone: D03  Architecture and requirements
 
-Document the logical ground-station-to-node architecture, module interfaces, initial requirements, and a **COM-001 wired UART PING/PONG test plan**.
+Document the logical ground-station-to-node architecture, module interfaces, initial requirements, and a **TST-001 wired UART PING/PONG test plan**.
 
 **No FIELDLINK hardware or firmware testing is claimed by this document.**
 
@@ -44,10 +46,10 @@ Document the logical ground-station-to-node architecture, module interfaces, ini
 
 | Phase | Scope | Status |
 | --- | --- | --- |
-| 1 | UART commands and responses | Planned |
+| 1 | Requirements and architecture review; UART commands and responses | Planning |
 | 2 | LoRa point-to-point link | Planned |
 | 3 | Message integrity and fault handling | Planned |
-| 4 | Sensor telemetry and logging | Planned |
+| 4 | Ground station UI, sensor telemetry, and logging | Planned |
 | 5 | Project-agnostic integration | Planned |
 | 6 | Optional multi-node support | Future |
 
