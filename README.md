@@ -24,7 +24,7 @@ Embedded systems · Communications and telemetry · Controls and automation · I
 
 | Project | Objective | Status |
 | --- | --- | --- |
-| **NAVCOM** | Develop a modular embedded command-and-telemetry platform, with LoRa communications and systematic verification. | Planning |
+| **FIELDLINK** | Design a reusable, bidirectional LoRa transceiver platform for exchanging commands, telemetry, and diagnostics across independent engineering projects. | Planning |
 | **Miniature TBM** | Explore motor control, navigation, autonomy, and maintainability on a small robotic testbed. | Concept |
 
 Project records will be added to [projects/](projects/) as work progresses. Technical case studies will be linked from [portfolio/](portfolio/).
@@ -37,6 +37,6 @@ Project records will be added to [projects/](projects/) as work progresses. Tech
 
 ## Current Milestone
 
-**D01 — Engineering workspace foundation:** organize the repository, establish standards, and document the first development milestones.
+**D03 — FIELDLINK architecture:** define the modular communication interface, initial requirements, and first UART verification plan.
 
 *This is an active development portfolio. Planned capabilities are not represented as demonstrated results.*
