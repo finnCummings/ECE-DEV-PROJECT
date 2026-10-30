@@ -1,0 +1,19 @@
+Section,Field,Entry
+Metadata,Activity title,[Activity Title]
+Metadata,Date (YYYY-MM-DD),
+Metadata,Project,NAVCOM
+Metadata,System / subsystem,Communications
+Metadata,Author,
+Metadata,Related GitHub issue,
+Objective,Goal,What am I trying to accomplish today?
+Work performed,Implementation / investigation,"What did I build, program, modify, or investigate?"
+Observations and results,Observed behavior / measurements,What actually happened? Include quantities and units when applicable.
+Observations and results,Evidence links,"Links to screenshots, instrument captures, or measurements."
+Problems and troubleshooting,Issue / symptom,What went wrong?
+Problems and troubleshooting,Investigation and findings,How did I diagnose it and what did I learn?
+Engineering decisions,Decision and rationale,What did I choose and why?
+Next steps,Action items,What should happen next?
+References,Relevant code,
+References,Schematics / CAD,
+References,Test data,
+References,Git commit SHA,
