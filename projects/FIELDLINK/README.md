@@ -26,6 +26,10 @@ FIELDLINK is intended to be a **communications building block**, not a communica
 - **Maintainable:** Clear wiring, straightforward debugging, and replaceable components.
 - **Safe failures:** Remote control integrations must account for stale or lost commands.
 
+## Operator interface
+
+The companion [FIELDLINK-UI](../FIELDLINK-UI/) project provides the desktop controls, command display, telemetry visualization, and diagnostics. FIELDLINK itself owns the reusable communication transport and protocol; the UI consumes that interface.
+
 ## Initial development hardware
 
 Candidate hardware from previous experiments: Arduino Uno R4 WiFi, EBYTE E32-900T20D UART LoRa modules, CP2102 USB-to-UART adapter, and a PC-based Python ground station. Exact voltage levels, pin assignments, operating modes, and configuration will be confirmed against the relevant datasheets before wiring.
