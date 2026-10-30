@@ -1,46 +1,48 @@
-# Engineering Templates
+# Engineering Documentation Templates
 
-These templates are **UTF-8 CSV files**, so they can be opened and edited directly in **Visual Studio Code** or a spreadsheet application. No extension is required to edit them as plain text.
+These are reusable **Markdown (`.md`) templates**, intended to be copied into the appropriate project directory and edited in **Visual Studio Code**. Markdown supports readable headings, tables, checklists, code, and internal links; GitHub also renders it automatically.
 
-## Templates
+## Open a template directly in VS Code for the Web
 
-| File | Use |
-| --- | --- |
-| [engineering_log.csv](engineering_log.csv) | Record significant engineering sessions, troubleshooting, decisions, and next steps. |
-| [test_plan.csv](test_plan.csv) | Define objective, equipment, configuration, variables, procedures, acceptance criteria, and safety before running a structured test. |
-| [test_report.csv](test_report.csv) | Capture observed results, raw evidence references, interpretation, acceptance criteria, and follow-up work after a test. |
+| Template | Purpose | Open in VS Code |
+| --- | --- | --- |
+| [Engineering Log](engineering_log.md) | Work sessions, results, troubleshooting, decisions, and next steps | [Open editor](https://github.dev/finnCummings/ECE-DEV-PROJECT/blob/main/templates/engineering_log.md) |
+| [Test Plan](test_plan.md) | Objective, setup, method, variables, acceptance criteria, and safety | [Open editor](https://github.dev/finnCummings/ECE-DEV-PROJECT/blob/main/templates/test_plan.md) |
+| [Test Report](test_report.md) | Actual measured results, evidence, interpretation, and conclusions | [Open editor](https://github.dev/finnCummings/ECE-DEV-PROJECT/blob/main/templates/test_report.md) |
 
-Each template has three columns: **Section**, **Field**, and **Entry**. Replace prompts and blanks in **Entry**; keep the **Section** and **Field** names so records are comparable.
+[Open the full repository in VS Code for the Web](https://github.dev/finnCummings/ECE-DEV-PROJECT)
 
-## Use in VS Code
+You can also press **`.`** while viewing the repository on GitHub to open the browser-based VS Code editor.
 
-1. Open this repository in VS Code.
-2. Copy a template to the relevant project folder, preserving the `.csv` extension.
-3. Edit in the text editor or optionally use a CSV table-view extension for more convenient cell editing.
-4. Commit the finished file with the associated code, design, or experimental record.
+## Using templates
 
-When manually editing CSV, **quote any cell containing commas, double quotes, or newlines** (double any interior quotation mark). If you edit the files in a spreadsheet application, export or save as CSV UTF-8.
+1. Open the editor and find a template under `templates/`.
+2. **Copy** the template into your project directory (do not fill in or overwrite the master).
+3. Name dated session logs with `YYYY-MM-DD`, for example `2026-11-05_uart_setup.md`.
+4. Keep the test plan and report together in a test-specific directory with stable names.
+5. Replace the placeholders with **actual** measurements, configuration information, and evidence; commit your work.
 
-## Naming and example
-
-Use a unique dated filename for log entries, e.g. `2026-11-05_uart_setup.csv`. For one test, place the copied plan and report together in its test directory under stable names:
+### Example organization — not yet executed
 
 ```text
-projects/navcom/systems/communications/
-├── logbook/
-│   └── 2026-11-05_uart_setup.csv
-└── tests/
-    └── COM-001_uart/
-        ├── test_plan.csv
-        ├── test_report.csv
-        ├── data/
-        │   └── 2026-11-06_run_001.csv
-        └── photos/
-            └── 2026-11-06_test_setup.jpg
+projects/
+└── navcom/
+    └── systems/
+        └── communications/
+            ├── logbook/
+            │   └── 2026-11-05_uart_setup.md
+            └── tests/
+                └── COM-001_uart/
+                    ├── test_plan.md
+                    ├── test_report.md
+                    ├── data/
+                    │   └── 2026-11-06_run_001.csv
+                    └── photos/
+                        └── 2026-11-06_test_setup.jpg
 ```
 
-The structure above is **illustrative**, not evidence that the test has been run. Create directories and measurement files when they are actually needed.
+**Use Markdown for engineering records and CSV for raw tabular measurement data**, such as sensor readings, latency measurements, or repeated experiment results.
 
-The templates record narrative notes in CSV to match this workspace preference; more extensive technical narratives, diagrams, and code should remain in formats best suited to them, such as Markdown, KiCad, C, or Python.
+In desktop VS Code, use **Ctrl+Shift+V** to preview Markdown. The browser editor is suitable for documentation; local VS Code is better for hardware access, firmware development, and test scripts.
 
-See [Engineering Guide](../ENGINEERING_GUIDE.md) for shared conventions.
+See the [Engineering Guide](../ENGINEERING_GUIDE.md) for file naming and configuration conventions.
