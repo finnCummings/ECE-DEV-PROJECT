@@ -6,6 +6,7 @@ These are reusable **Markdown (`.md`) templates**, intended to be copied into th
 
 | Template | Purpose | Open in VS Code |
 | --- | --- | --- |
+| [Requirements](requirements.md) | Functional requirements, interface constraints, verification methods, and traceability | [Open editor](https://github.dev/finnCummings/ECE-DEV-PROJECT/blob/main/templates/requirements.md) |
 | [Engineering Log](engineering_log.md) | Work sessions, results, troubleshooting, decisions, and next steps | [Open editor](https://github.dev/finnCummings/ECE-DEV-PROJECT/blob/main/templates/engineering_log.md) |
 | [Test Plan](test_plan.md) | Objective, setup, method, variables, acceptance criteria, and safety | [Open editor](https://github.dev/finnCummings/ECE-DEV-PROJECT/blob/main/templates/test_plan.md) |
 | [Test Report](test_report.md) | Actual measured results, evidence, interpretation, and conclusions | [Open editor](https://github.dev/finnCummings/ECE-DEV-PROJECT/blob/main/templates/test_report.md) |
@@ -20,7 +21,9 @@ You can also press **`.`** while viewing the repository on GitHub to open the br
 2. **Copy** the template into your project directory (do not fill in or overwrite the master).
 3. Name dated session logs with `YYYY-MM-DD`, for example `2026-11-05_uart_setup.md`.
 4. Keep the test plan and report together in a test-specific directory with stable names.
-5. Replace the placeholders with **actual** measurements, configuration information, and evidence; commit your work.
+5. Replace the placeholders with **actual** requirements, measurements, configurations, and evidence; commit your work.
+
+For a new project, copy `requirements.md` into the project root. Keep requirement IDs (`SYS-001`, `COM-001`) separate from test IDs (`TST-001`), and update relative links after copying.
 
 ### Example organization — not yet executed
 
@@ -32,7 +35,7 @@ projects/
             ├── logbook/
             │   └── 2026-11-05_uart_setup.md
             └── tests/
-                └── COM-001_uart/
+                └── TST-001_uart/
                     ├── test_plan.md
                     ├── test_report.md
                     ├── data/
