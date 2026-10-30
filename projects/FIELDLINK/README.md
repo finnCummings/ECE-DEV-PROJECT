@@ -30,13 +30,17 @@ FIELDLINK is intended to be a **communications building block**, not a communica
 
 FIELDLINK contains the [ground station UI](ground_station/ui/README.md), ground-side transceiver, shared message protocol, and remote transceiver as parts of one integrated system. The UI manages operator commands, telemetry visualization, and diagnostics; the transceivers handle transport. External applications remain independent projects.
 
-The [master system requirements](requirements.md) cover all FIELDLINK subsystems and are currently **Draft — Pending Review**.
+The [master system requirements](requirements.md) cover all FIELDLINK subsystems. The project owner approved the v0.2 requirements in conversation on 2026-10-30; the requirements file's review-status metadata has not yet been updated.
 
 ## Initial development hardware
 
 Candidate hardware from previous experiments: Arduino Uno R4 WiFi, EBYTE E32-900T20D UART LoRa modules, CP2102 USB-to-UART adapter, and a PC-based Python ground station. Exact voltage levels, pin assignments, operating modes, and configuration will be confirmed against the relevant datasheets before wiring.
 
-## First milestone: D03  Architecture and requirements
+## Current development priority
+
+**Approved focus (2026-10-30):** Establish wired UART and bidirectional LoRa communications first. The graphical user interface remains in scope, but implementation is **deferred** until the communications baseline is functioning and tested. Use a serial monitor for early command-response experiments; no Python GUI is required.
+
+## First milestone: D03 — Architecture and requirements
 
 Document the logical ground-station-to-node architecture, module interfaces, initial requirements, and a **TST-001 wired UART PING/PONG test plan**.
 
@@ -46,11 +50,12 @@ Document the logical ground-station-to-node architecture, module interfaces, ini
 
 | Phase | Scope | Status |
 | --- | --- | --- |
-| 1 | Requirements and architecture review; UART commands and responses | Planning |
-| 2 | LoRa point-to-point link | Planned |
-| 3 | Message integrity and fault handling | Planned |
-| 4 | Ground station UI, sensor telemetry, and logging | Planned |
-| 5 | Project-agnostic integration | Planned |
-| 6 | Optional multi-node support | Future |
+| 1 | Wired UART PING/PONG; test plan, firmware and evidence | Next implementation milestone |
+| 2 | Two-way LoRa PING/PONG over ground/remote transceivers | Planned |
+| 3 | Message framing, integrity checking, acknowledgments, timeouts and retries | Planned |
+| 4 | MS8607 sensor telemetry and logging through simple serial tools | Planned |
+| 5 | Reusable interface to different remote projects | Planned |
+| 6 | Ground-station graphical UI, after the communications baseline | Deferred |
+| 7 | Optional multi-node support | Future |
 
 Follow the [Engineering Guide](../../ENGINEERING_GUIDE.md) and use the [documentation templates](../../templates/) for records.
