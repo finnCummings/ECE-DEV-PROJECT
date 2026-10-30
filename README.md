@@ -25,6 +25,7 @@ Embedded systems · Communications and telemetry · Controls and automation · I
 | Project | Objective | Status |
 | --- | --- | --- |
 | **FIELDLINK** | Design a reusable, bidirectional LoRa transceiver platform for exchanging commands, telemetry, and diagnostics across independent engineering projects. | Planning |
+| **[FIELDLINK-UI](projects/FIELDLINK-UI/)** | Build a reusable desktop operator interface for sending FIELDLINK commands, viewing telemetry, and diagnosing connections. | Planning |
 | **Miniature TBM** | Explore motor control, navigation, autonomy, and maintainability on a small robotic testbed. | Concept |
 
 Project records will be added to [projects/](projects/) as work progresses. Technical case studies will be linked from [portfolio/](portfolio/).
