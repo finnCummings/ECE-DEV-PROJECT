@@ -11,7 +11,7 @@
 
 ## 1. System Objective
 
-Describe what the system is intended to accomplish, who or what uses it, and the boundaries of its responsibility.
+Describe what the system is intended to accomplish, who or what uses it, and the boundaries of its responsibility. For integration platforms, distinguish the transport, protocol adapters, normalized data model, diagnostics, and external application.
 
 ## 2. Scope
 
@@ -45,7 +45,7 @@ Include only constraints with a genuine technical basis. Replace vague words lik
 | --- | --- | --- | --- |
 | [Interface] | [External system] | [UART / USB / API / power / other] | [Voltage, baud rate, framing, assumptions, or TBD] |
 
-Identify which project owns each side of the interface.
+Identify which project owns each side of the interface. For multi-protocol work, document supported protocol versions, register maps or message schemas, payload scaling/units, unknown-format handling, and preservation of raw evidence.
 
 ## 6. Requirement Decomposition
 
@@ -66,6 +66,10 @@ Keep **requirement IDs** (e.g., `COM-001`) separate from **test IDs** (e.g., `TS
 | COM-002 | TST-001 (planned) | Not tested | — |
 
 Valid status examples: **Not tested**, **In progress**, **Passed**, **Failed**, **Inconclusive**. Only mark **Passed** when supported by actual recorded evidence.
+
+## Educational and Evidence Objectives
+
+Record the engineering skills this project will demonstrate, planned experiments, and portfolio evidence expected. These educational aims support the project but do not substitute for objectively verified technical requirements.
 
 ## 8. Open Engineering Decisions
 
