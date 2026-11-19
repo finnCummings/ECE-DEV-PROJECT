@@ -78,6 +78,15 @@ A small traceability table in the project's requirements document is sufficient 
 
 Update results **only after executing tests** and linking actual reports, raw data, or other evidence. Keep engineering logbooks identified by date and descriptive filename; a separate `LOG-NNN` series is unnecessary unless a genuine traceability need emerges. Existing examples labeled `COM-001_uart` should be renamed to `TST-001_uart` when the corresponding test directory is created.
 
+## Modular integration and diagnostics principles
+
+- Keep **transport** (UART, LoRa, RS-485, Ethernet) distinct from **protocol decoding** (custom messages, Modbus, MAVLink), **normalized measurements**, and **diagnostic rules**.
+- A new device interface should use a versioned adapter or documented schema. Never infer the meaning of unknown bytes without a trusted protocol definition or register map.
+- Preserve source protocol, device identity, units/scaling, timestamp provenance, freshness/quality, and relevant raw evidence during normalization; avoid dropping useful debugging context.
+- Distinguish an **observed symptom** (packet gap, current spike, timeout) from an **inferred root cause** (interference, stall, power failure). Label hypotheses and confidence appropriately.
+- Prefer supported industry-standard parsers where appropriate. Do not invent new formats or layers without a defined learning objective, testable benefit, or integration need.
+- Treat the educational goal as a first-class outcome: record what was learned, why designs changed, and how repeatable experiments support claims. A graphical UI is optional when a terminal and logs can verify the behavior.
+
 ## Practical workflow
 1. Define the problem and what success means.
 2. Design a simple solution, noting meaningful tradeoffs.
