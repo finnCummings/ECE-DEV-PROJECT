@@ -1,6 +1,6 @@
 # Engineering Documentation Templates
 
-These are reusable **Markdown (`.md`) templates**, intended to be copied into the appropriate project directory and edited in **Visual Studio Code**. Markdown supports readable headings, tables, checklists, code, and internal links; GitHub also renders it automatically.
+These are reusable **Markdown (`.md`) templates** for communications, protocol-adapter integration, diagnostics, experiments, and other engineering projects, intended to be copied into the appropriate project directory and edited in **Visual Studio Code**. Markdown supports readable headings, tables, checklists, code, and internal links; GitHub also renders it automatically.
 
 ## Open a template directly in VS Code for the Web
 
@@ -21,7 +21,7 @@ You can also press **`.`** while viewing the repository on GitHub to open the br
 2. **Copy** the template into your project directory (do not fill in or overwrite the master).
 3. Name dated session logs with `YYYY-MM-DD`, for example `2026-11-05_uart_setup.md`.
 4. Keep the test plan and report together in a test-specific directory with stable names.
-5. Replace the placeholders with **actual** requirements, measurements, configurations, and evidence; commit your work.
+5. Replace the placeholders with **actual** requirements, measurements, configurations, and evidence; commit your work. For adapter or diagnostic tests, preserve native protocol/version, device schema, units, timing, error counters, and fault-injection method.
 
 For a new project, copy `requirements.md` into the project root. Keep requirement IDs (`SYS-001`, `COM-001`) separate from test IDs (`TST-001`), and update relative links after copying.
 
