@@ -2,7 +2,7 @@
 
 | Metadata | Value |
 | --- | --- |
-| Test ID | COM-001 |
+| Test ID | TST-001 |
 | Date | YYYY-MM-DD |
 | Project | FIELDLINK |
 | System / subsystem | Communications |
@@ -18,6 +18,8 @@ What was tested, and what outcome was observed? Distinguish results from interpr
 - **Instrumentation / calibration:**
 - **Conditions:**
 - **Deviations from test plan:**
+- **Source device, protocol/schema and adapter version:**
+- **Timestamp source, units/scaling and quality/freshness rules:**
 
 ## Results
 | Measurement | Observed value | Unit | Notes |
@@ -29,6 +31,12 @@ What was tested, and what outcome was observed? Distinguish results from interpr
 - **Analysis and scripts:**
 - **Plots / figures:**
 - **Instrument captures:**
+
+## Protocol and Diagnostic Interpretation (when applicable)
+- **Original message/register evidence:**
+- **Normalized record(s) and field mapping:**
+- **Detected symptoms versus inferred root cause:**
+- **Unsupported formats, dropped data, or decoder limitations:**
 
 ## Analysis
 What do the measurements mean? Compare results with the hypothesis, discuss repeatability, uncertainty, and limitations.
