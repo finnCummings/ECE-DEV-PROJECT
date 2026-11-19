@@ -8,7 +8,7 @@
 
 ## Objective
 
-Demonstrate that an embedded node receives defined serial commands and returns the correct response using a wired USB serial connection. This test isolates UART and command parsing from radio configuration and RF link failures.
+Demonstrate that an embedded node receives defined serial commands and returns the correct response using a wired USB serial connection. This test isolates UART and command parsing from radio configuration and RF link failures. It is the **first educational baseline** for the larger modular communications and diagnostic integration platform. It does not demonstrate protocol interoperability, normalized telemetry, or application diagnostics.
 
 ## Initial hardware / software
 
@@ -78,6 +78,10 @@ A serial terminal alone may not support trustworthy per-exchange latency measure
 - actual configuration;
 - completed test report;
 - pass/fail/inconclusive status for each criterion.
+
+## Learning and portfolio outcomes
+
+Practice embedded C/C++ input parsing, bounded command buffers, serial configuration, reproducible test methods, and error reporting. Retain the source code, firmware commit, raw responses, and a completed test report before claiming success.
 
 ## Next experiment
 
