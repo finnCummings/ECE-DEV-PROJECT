@@ -95,7 +95,7 @@ Equipment available for evaluation includes the Arduino Uno R4 WiFi, EBYTE E32-9
 
 `SYS-001` is an **end-to-end** requirement. UART tests against `COM-001` and `COM-002` provide supporting evidence but cannot by themselves prove wireless operation. `GND` and `RMT` requirements contribute to the end-to-end system as distinct subsystems.
 
-The FIELDLINK ground-station UI is **not a separate project**. Its [subsystem README](ground_station/ui/README.md) documents UI-specific development while this document remains the master requirements baseline.
+The FIELDLINK ground-station UI is **not a separate project**. Its UI is a deferred subsystem; UI-specific design documentation will be added when UI work becomes active, while this file remains the master requirements document.
 
 ## 7. Preliminary Verification Traceability
 
