@@ -2,12 +2,12 @@
 
 | Metadata | Value |
 | --- | --- |
-| Test ID | COM-001 |
+| Test ID | TST-001 |
 | Date | YYYY-MM-DD |
 | Project | FIELDLINK |
 | System / subsystem | Communications |
 | Author | |
-| Related requirement / GitHub issue | |
+| Related requirement IDs / GitHub issue | |
 
 ## Objective
 What are we measuring or verifying?
@@ -29,6 +29,8 @@ What do we expect to happen, and why?
 - **Firmware commit SHA:**
 - **Operating conditions:**
 - **Communication settings:**
+- **Native protocol, adapter/schema or register-map version:**
+- **Measurement units, scaling, timestamp source, freshness criteria:**
 
 ## Variables
 - **Independent:** What will we change?
@@ -55,6 +57,12 @@ State measurable **pass / fail** thresholds *before* testing. Specify sample cou
 - **Sampling method / repetitions:**
 - **Raw data file naming:**
 - **Uncertainty / instrument limitations:**
+
+## Diagnostic and Interoperability Checks (when applicable)
+- **Transport errors versus application/device faults:**
+- **Unknown or unsupported message handling:**
+- **Raw evidence and normalized output comparison:**
+- **Fault injection and expected diagnostic outcome:**
 
 ## Safety Considerations
 What could fail, and what protections or safe states are required?
