@@ -110,5 +110,5 @@ Work should progress through **define → design → build → test → analyze 
 
 - [Requirements v0.3 proposed](requirements.md)
 - [TST-001 UART test plan](systems/communications/tests/TST-001_uart/test_plan.md)
-- [Ground station UI — deferred](ground_station/ui/README.md)
+- Ground-station graphical UI — deferred; subsystem documentation will be added when implementation begins
 - [Repository engineering guide](../../ENGINEERING_GUIDE.md)
